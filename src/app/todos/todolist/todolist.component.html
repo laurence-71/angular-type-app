@@ -1,0 +1,24 @@
+
+<div class="container">
+
+<h1>List</h1>
+<div class="result">
+<div *ngIf="error">
+<button color="pink" (click)="retry()">Try again</button>
+</div>
+<div *ngIf="!todoList && !error ; else new" class="loader">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <ng-template #new>
+    <button class="btnCreate" color="pink" routerLink="todo">New task</button>
+  </ng-template>
+
+<div *ngFor="let todo of todoList" class="todoItem">
+    <h2 class="title">{{todo.task}}</h2>
+    <button class="btnCreate" [routerLink]="['detail',todo.task]">Detail</button>
+    <button class="btnCreate" [disabled]="this.todoDisabled == this.todo" (click)="delete(todo)">Delete</button>
+</div>
+</div></div>
