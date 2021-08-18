@@ -4,13 +4,16 @@
 <h1>List</h1>
 <div class="result">
 <div *ngIf="error">
-<button color="pink" (click)="retry()">Try again</button>
+<button mat-raised-button class="btnCreate" (click)="retry()">Try again</button>
 </div>
-<div *ngIf="!todoList && !error ; else new" class="loader">
+<div  *ngIf="todoList && error; else new" class="loader">
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
+    
+
+
   </div>
   <ng-template #new>
     <button mat-raised-button class="btnCreate" color="pink" routerLink="todo">New task</button>
@@ -18,20 +21,9 @@
 
 <div *ngFor="let todo of todoList" class="todoItem">
     <h2 class="title">{{todo.task}}</h2>
-    <button class="mdc-button btnCreate"[routerLink]="['detail',todo.task]" >
-      <span class="mdc-button__ripple"></span>
-      <span class="mdc-button__label">Detail</span>
-   </button>
-  
-  
-    
-     
-        <button  [disabled]="this.todoDisabled == this.todo" (click)="delete(todo)">
-          <mat-icon color="warn" >delete_outline</mat-icon>
-        </button>
-    
- 
-
-   
+    <button mat-raised-button class=" btnCreate"[routerLink]="['detail',todo.task]" >Detail</button>
+    <button mat-raised-button class="icon" [disabled]="this.todoDisabled == this.todo" (click)="delete(todo)">
+          <mat-icon  >delete_outline</mat-icon>
+    </button>
 </div>
 </div></div>

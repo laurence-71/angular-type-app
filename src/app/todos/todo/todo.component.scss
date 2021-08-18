@@ -17,12 +17,16 @@ h2{
 .item{
     margin-top: 10px;;
     margin-bottom: 10px;
-    background-color: pink;
+    background-color: rgba(233,190,197,0.5);
     font-size: 18px;
     border: rgb(195, 154, 235) solid 2px;
+    width:100%;
+    color:rgb(46,39,80);
+    font-weight: bold;
 }
 
 .btnCreate{
     background-color: rgb(233, 190, 197);
     color: black;
+    margin:2px;
 }

@@ -10,7 +10,7 @@ import { TodoService } from '../shared/todo.service';
 })
 export class TodolistComponent implements OnInit {
 
- @Input() public error:boolean=false;
+ @Input() public error:Boolean=true;
  @Input() public disabled:boolean=true;
 
 
@@ -27,7 +27,7 @@ export class TodolistComponent implements OnInit {
   retry():void{
     this.todoService.get().subscribe(
       (todoList:Todo[])=>{
-        this.error;
+        this.error=false;
         this.todoList=todoList;
       },
       ()=>{

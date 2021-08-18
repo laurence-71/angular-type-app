@@ -1,21 +1,20 @@
 <div class="container">
     <h2>Creation</h2>
     <form [formGroup]="todoForm" (ngSubmit)="create()" class="form">
-        <div class="item">
-          <label  for="task">Task :</label>
-          <input class="item" id="task" type="text" formControlName="task">
+        <p><mat-form-field class="item">
+          <mat-label  for="task">Task :</mat-label>
+          <input matInput  id="task" type="text" formControlName="task">
             <span *ngIf="!todoForm.get('task')?.valid && todoForm.get('task')?.dirty">
               Not valid
             </span>
-      
+        </mat-form-field></p>
         
-        </div>
-        <div class="item">
-          <label  for="description">Description : </label>
-          <input class="item" id="description" type="text" formControlName="description">
-          </div>
-        <button class="btnCreate" color="pink" routerLink='todos'>Return</button>
-        <button [disabled]="!todoForm.valid || disabled" class="btnCreate" color="pink" type="submit">Create</button>
-      </form>
+        <p><mat-form-field class="item">
+          <mat-label  for="description">Description : </mat-label>
+          <textarea matInput  id="description" type="text" formControlName="description"></textarea>
+        </mat-form-field></p>
+        <button mat-raised-button class="btnCreate" color="pink" routerLink='todos'>Return</button>
+        <button mat-raised-button [disabled]="!todoForm.valid || disabled" class="btnCreate" color="pink" type="submit">Create</button>
+    </form>
       
 </div>

@@ -22,12 +22,11 @@
 .btnCreate{
     color: black;
     background-color: rgb(233, 190, 197);
+    margin: 2px;
 }
 
 .title{
     color : white;
-
-    
 }
 
 h1{
@@ -41,8 +40,9 @@ h1{
 }
 
 .icon{
-  transform:scale(0.8);
-   
+   background-color: rgb(219, 48, 48);
+ vertical-align:bottom;
+ margin:2px;
 }
 
 
@@ -56,18 +56,19 @@ h1{
 
 .loader{
     position:absolute;
-    top: 35%;
-    left: 40%;
-
-
+    top:12%;
+    left:45%;
+  
+  
 .line {
     animation: expand 1s ease-in-out infinite;
   border-radius: 10px;
+ 
   display: inline-block;
   transform-origin: center center;
   margin: 10px 10px;
-  width: 10px;
-  height: 60px;
+  width: 8px;
+  height: 40px;
 }
 
 .line:nth-child(1){
@@ -88,6 +89,10 @@ h1{
     animation-delay: 540ms;
     background:sandybrown ;
 }
+
+
+
+
 
 @keyframes expand {
     0%{
