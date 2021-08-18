@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Todo } from '../shared/todo';
 import { TodoService } from '../shared/todo.service';
 
+
 @Component({
   selector: 'app-todolist',
   templateUrl: './todolist.component.html',
@@ -18,8 +19,8 @@ export class TodolistComponent implements OnInit {
 
   constructor(private todoService:TodoService) { 
   
+   this.todoList=this.todoService.todoList;
    
-    this.todoList=this.todoService.todoList;
     this.retry();
   }
 
@@ -48,12 +49,10 @@ export class TodolistComponent implements OnInit {
     );
   }
 
- 
-  
-
-
-
-  ngOnInit(): void {
+  ngOnInit() {
+  }
   }
 
-}
+ 
+
+

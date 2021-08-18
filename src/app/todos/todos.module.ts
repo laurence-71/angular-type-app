@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TodolistComponent } from './todolist/todolist.component';
 import { TodoComponent } from './todo/todo.component';
 import { DetailComponent } from './detail/detail.component';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { DetailComponent } from './detail/detail.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    MaterialModule,
     TodosRoutingModule
   ]
 })

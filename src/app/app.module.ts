@@ -4,9 +4,9 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodosComponent } from './todos/todos.component';
 import { TodosModule } from './todos/todos.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -17,8 +17,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     TodosModule,
     RouterModule,
+     BrowserAnimationsModule,
+       MaterialModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+  
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
