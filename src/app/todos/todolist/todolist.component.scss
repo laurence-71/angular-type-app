@@ -37,6 +37,7 @@ h1{
    height:100%;
     margin-left: 25px;
     margin-right: 25px;
+   
 }
 
 .icon{
@@ -55,12 +56,13 @@ h1{
 }
 
 .loader{
-    position:absolute;
-    top:12%;
-    left:45%;
+    position:relative;
+    font-size: 26px;
+    font-weight: bold;
   
   
 .line {
+   
     animation: expand 1s ease-in-out infinite;
   border-radius: 10px;
  
